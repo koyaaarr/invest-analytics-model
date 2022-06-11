@@ -1,0 +1,152 @@
+version: 2
+
+sources:
+  - name: invest_analytics_dev
+    tables:
+      - name: source-voo
+      - name: source-btcusd
+      - name: source-bnd
+      - name: source-portfolio
+
+models:
+  - name: mart-portfolio-ratio
+    description: ''
+    columns:
+      - name: ticker
+        description: ''
+        tests:
+          - unique
+          - not_null
+          - accepted_values:
+              values: ['voo', 'btcusd', 'bnd']
+      - name: close_percent
+        description: ''
+        tests:
+          - unique
+          - not_null
+
+  - name: mart-portfolio-value
+    description: ''
+    columns:
+      - name: Date
+        description: ''
+        tests:
+          - unique
+          - not_null
+      - name: close_voo
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_btcusd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_bnd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_total
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+
+  - name: warehouse-stock
+    description: ''
+    columns:
+      - name: Date
+        description: ''
+        tests:
+          - unique
+          - not_null
+      - name: open_voo
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: high_voo
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: low_voo
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_voo
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: open_btcusd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: high_btcusd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: low_btcusd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_btcusd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: open_bnd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: high_bnd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: low_bnd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+      - name: close_bnd
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+
+  - name: warehouse-date
+    description: ''
+    columns:
+      - name: Date
+        description: ''
+        tests:
+          - unique
+          - not_null
+
+  - name: warehouse-portfolio
+    description: ''
+    columns:
+      - name: num_voo
+        description: ''
+        tests:
+          - unique
+          - not_null
+      - name: num_btcusd
+        description: ''
+        tests:
+          - unique
+          - not_null
+      - name: num_bnd
+        description: ''
+        tests:
+          - unique
+          - not_null

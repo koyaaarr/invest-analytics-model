@@ -1,0 +1,14 @@
+invest_analytics:
+  outputs:
+    dev:
+      dataset: invest_analytics_dev
+      job_execution_timeout_seconds: 300
+      job_retries: 1
+      keyfile: ../service_account.json
+      location: asia-northeast1
+      method: service-account
+      priority: interactive
+      project: invest-analytics-347211
+      threads: 1
+      type: bigquery
+  target: dev
