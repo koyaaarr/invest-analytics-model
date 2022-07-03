@@ -1,4 +1,5 @@
 this is a use case of dbt and bigquery to process stock data
+- https://koyaaarr.medium.com/dbt-and-bigquery-in-practice-transform-stock-data-1771e2393319
 
 # prerequisites
 
