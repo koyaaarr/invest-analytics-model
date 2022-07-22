@@ -54,6 +54,15 @@ models:
           # - unique
           # - not_null
 
+  - name: warehouse-portfolio
+    description: ''
+    columns:
+      - name: close_total
+        description: ''
+        tests:
+          # - unique
+          # - not_null
+
   - name: warehouse-stock
     description: ''
     columns:
@@ -132,7 +141,7 @@ models:
           - unique
           - not_null
 
-  - name: warehouse-portfolio
+  - name: warehouse-num-hold
     description: ''
     columns:
       - name: num_voo

@@ -35,6 +35,7 @@ models:
       +materialized: view
       warehouse-date:
       warehouse-stock:
+      warehouse-num-hold:
       warehouse-portfolio:
       mart-portfolio-value:
         +materialized: table

@@ -1,16 +1,18 @@
 with dates as (
   select
-      Date
+    Date
   from
     {{ source('invest_analytics_dev', 'source-voo') }}
-  union all
+  union
+  all
   select
-      Date
+    Date
   from
     {{ source('invest_analytics_dev', 'source-btcusd') }}
-  union all
+  union
+  all
   select
-      Date
+    Date
   from
     {{ source('invest_analytics_dev', 'source-bnd') }}
 )
